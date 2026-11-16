@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+
+
+  --color-fundo: #0f0f12;
+  --color-destaque: #7b2cbf;
+  --color-destaque-escuro: #1e1e24;
+  --color-destaque-claro: #f4f4f5;
+}
+
+@layer base {
+  body {
+    @apply bg-fundo text-white font-sans antialiased;
+  }
+}

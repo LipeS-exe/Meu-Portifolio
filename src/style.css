@@ -1,19 +1,44 @@
 @import "tailwindcss";
 
+/* 1. Registrar os arquivos da pasta src/assets/fonts com @font-face */
+@font-face {
+  font-family: "Fira Mono";
+  src: url("./assets/fonts/FiraMono-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fira Mono";
+  src: url("./assets/fonts/FiraMono-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fira Mono";
+  src: url("./assets/fonts/FiraMono-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 2. Conectar a fonte às classes do Tailwind v4 no bloco @theme */
 @theme {
+  --font-sans: "Fira Mono", monospace;
+  --font-display: "Fira Mono", monospace;
+  --font-mono: "Fira Mono", monospace;
 
-  --font-sans: "Inter", sans-serif;
-  --font-display: "Space Grotesk", sans-serif;
-
-
-  --color-fundo: #0f0f12;
-  --color-destaque: #7b2cbf;
-  --color-destaque-escuro: #1e1e24;
-  --color-destaque-claro: #f4f4f5;
+  --color-fundo: #121214;
+  --color-superficie: #18181b;
+  --color-destaque: #9333ea;
+  --color-destaque-claro: #a855f7;
 }
 
 @layer base {
   body {
-    @apply bg-fundo text-white font-sans antialiased;
+    @apply bg-[#121214] text-gray-100 font-sans antialiased overflow-x-hidden;
   }
 }
